@@ -1,0 +1,39 @@
+{
+  "type": "Cell",
+  "start": 0,
+  "end": 14,
+  "id": null,
+  "body": {
+    "type": "JSXElement",
+    "start": 0,
+    "end": 13,
+    "openingElement": {
+      "type": "JSXOpeningElement",
+      "start": 0,
+      "end": 13,
+      "attributes": [],
+      "name": {
+        "type": "JSXIdentifier",
+        "start": 1,
+        "end": 10,
+        "name": "Component"
+      },
+      "selfClosing": true
+    },
+    "closingElement": null,
+    "children": []
+  },
+  "async": false,
+  "generator": false,
+  "references": [
+    {
+      "type": "JSXIdentifier",
+      "start": 1,
+      "end": 10,
+      "name": "Component"
+    }
+  ],
+  "fileAttachments": [],
+  "databaseClients": [],
+  "secrets": []
+}

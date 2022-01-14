@@ -1,5 +1,5 @@
 import assert from "assert";
-import {parseCell} from "@observablehq/parser";
+import {parseCell} from "../src/index.js";
 import {Node} from "acorn";
 
 function node(fields) {

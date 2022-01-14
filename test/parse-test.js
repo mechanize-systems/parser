@@ -1,7 +1,7 @@
 import assert from "assert";
 import * as fs from "fs";
 import * as path from "path";
-import {parseCell} from "@observablehq/parser";
+import {parseCell} from "../src/index.js";
 
 (async () => {
   for (const file of fs.readdirSync(path.join("test", "input"))) {

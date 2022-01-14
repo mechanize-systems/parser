@@ -1,5 +1,5 @@
 import assert from "assert";
-import {peekId} from "@observablehq/parser";
+import {peekId} from "../src/index.js";
 
 it("peekId", () => {
   assert.strictEqual(peekId("a = 1"), "a");

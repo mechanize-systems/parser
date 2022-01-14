@@ -1,5 +1,5 @@
 {
-  "name": "@observablehq/parser",
+  "name": "@sketches/parser",
   "description": "An Acorn parser for Observable JavaScript",
   "version": "6.0.0",
   "author": {
@@ -9,6 +9,7 @@
   "license": "ISC",
   "type": "module",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "module": "src/index.js",
   "jsdelivr": "dist/parser.min.js",
   "unpkg": "dist/parser.min.js",
@@ -36,7 +37,9 @@
     "@observablehq/parser": "./src/index.js"
   },
   "dependencies": {
+    "@types/estree": "^0.0.50",
     "acorn": "8",
+    "acorn-jsx": "^5.3.2",
     "acorn-walk": "8"
   },
   "devDependencies": {

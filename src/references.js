@@ -60,6 +60,9 @@ export default function findReferences(cell, globals) {
       case "Identifier":
         declareLocal(parent, node);
         break;
+      case "JSXIdentifier":
+        declareLocal(parent, node);
+        break;
       case "ObjectPattern":
         node.properties.forEach(node => declarePattern(node, parent));
         break;
@@ -158,7 +161,11 @@ export default function findReferences(cell, globals) {
     ast,
     {
       VariablePattern: identifier,
-      Identifier: identifier
+      Identifier: identifier,
+      JSXIdentifier(node, parents) {
+        if (node.name[0].toLowerCase() === node.name[0]) return;
+        identifier(node, parents);
+      }
     },
     walk
   );

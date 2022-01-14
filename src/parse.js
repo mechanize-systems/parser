@@ -1,4 +1,5 @@
 import {getLineInfo, TokContext, tokTypes as tt, Parser} from "acorn";
+import jsx from "acorn-jsx";
 import defaultGlobals from "./globals.js";
 import findReferences from "./references.js";
 import findFeatures from "./features.js";
@@ -26,7 +27,7 @@ export function parseCell(input, {tag, raw, globals, ...options} = {}) {
   return cell;
 }
 
-export class CellParser extends Parser {
+export class BaseCellParser extends Parser {
   constructor(options, ...args) {
     super(Object.assign({ecmaVersion: 13}, options), ...args);
   }
@@ -218,6 +219,8 @@ export class CellParser extends Parser {
     }
   }
 }
+
+export let CellParser = BaseCellParser.extend(jsx());
 
 // Based on acorn’s q_tmpl. We will use this to initialize the
 // parser context so our `readTemplateToken` override is called.
